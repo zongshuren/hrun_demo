@@ -1,0 +1,13 @@
+config:
+  name: 登录成功用例
+  variables:
+    user: test2
+
+teststeps:
+-
+  name: 用例步骤-登录
+  api: api/login.yml
+  validate:
+    - eq: [content.code, 0]
+    - eq: [content.msg, login success!]
+    - eq: [content.username, $user]

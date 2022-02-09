@@ -1,0 +1,12 @@
+name: 登录接口API
+variables:
+  user: test1
+  psw: "123456"
+request:
+  method: POST
+  url: http://49.235.92.12:7005/api/v1/login
+  json:
+    username: $user
+    password: $psw
+balidate:
+  - eq: [status_code, 200]

@@ -1,0 +1,14 @@
+config:
+  name: 登录成功用例
+  variables:
+    user: testx2
+    psw: xxxx
+
+teststeps:
+-
+  name: 用例步骤-登录
+  api: api/login.yml
+  validate:
+    - eq: [content.code, 3003]
+    - eq: [content.msg, 账号或密码不正确]
+    - eq: [content.username, $user]
