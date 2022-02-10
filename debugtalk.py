@@ -6,7 +6,6 @@ from utils.aes_test import PrpCrypt
 def sleep(n_secs):
     time.sleep(n_secs)
 
-
 def sign_value(request):
     body = request.get("json")
     print(body)
